@@ -21,10 +21,6 @@ export class ReactNativeDriver extends AbstractSqliteDriver {
         // validate options to make sure everything is set
         if (!this.options.database)
             throw new DriverOptionNotSetError("database");
-
-        if (!this.options.location)
-            throw new DriverOptionNotSetError("location");
-
         // load sqlite package
         this.loadDependencies();
     }
