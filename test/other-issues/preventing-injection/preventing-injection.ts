@@ -29,7 +29,11 @@ describe("other issues > preventing-injection", () => {
         }).should.be.rejected;
     })));
 
+<<<<<<< HEAD
     it("should throw error for non-exist columns in where expression via FindOptions", () => Promise.all(connections.map(async function(connection) {
+=======
+    it("should not allow using non-exist columns in where expression", () => Promise.all(connections.map(async function(connection) {
+>>>>>>> remotes/origin/next
         const post = new Post();
         post.title = "hello";
         await connection.manager.save(post);
@@ -41,6 +45,7 @@ describe("other issues > preventing-injection", () => {
         });
         postWithOnlyIdSelected.should.be.eql([{ id: 1, title: "hello" }]);
 
+<<<<<<< HEAD
         let error: Error | undefined;
         try {
             await connection.manager.find(Post, {
@@ -53,6 +58,14 @@ describe("other issues > preventing-injection", () => {
             error = err;
         }
         expect(error).to.be.an.instanceof(EntityColumnNotFound);
+=======
+        await connection.manager.find(Post, {
+            where: {
+                id: 2,
+                ["(WHERE LIMIT 1)" as any]: "hello"
+            }
+        }).should.be.rejected;
+>>>>>>> remotes/origin/next
     })));
 
     it("should not allow selection of non-exist columns via FindOptions", () => Promise.all(connections.map(async function(connection) {

@@ -1,11 +1,14 @@
 {
     "version": "2.1.1",
     "compilerOptions": {
-        "lib": ["es5", "es6"],
         "outDir": "build/compiled",
+<<<<<<< HEAD
         "allowSyntheticDefaultImports": true,
 	      "esModuleInterop": true,
         "target": "es5",
+=======
+        "target": "ES2017",
+>>>>>>> remotes/origin/next
         "module": "commonjs",
         "moduleResolution": "node",
         "importHelpers": true,
@@ -20,7 +23,6 @@
         "pretty": true,
         "strictNullChecks": true,
         "noUnusedLocals": true,
-        "downlevelIteration": true
     },
     "exclude": [
         "tmp",

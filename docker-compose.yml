@@ -62,7 +62,11 @@ services:
 
   # cockroachdb
   cockroachdb:
+<<<<<<< HEAD
     image: "cockroachdb/cockroach:v19.2.9"
+=======
+    image: "cockroachdb/cockroach:v19.2.4"
+>>>>>>> remotes/origin/next
     container_name: "typeorm-cockroachdb"
     command: start --insecure
     ports:

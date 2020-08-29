@@ -121,6 +121,7 @@ export interface NamingStrategyInterface {
      * Gets the name of the alias used for relation joins.
      */
     eagerJoinRelationAlias(alias: string, propertyPath: string): string;
+<<<<<<< HEAD
 
     /**
      * Column names for nested sets.
@@ -132,3 +133,6 @@ export interface NamingStrategyInterface {
      */
     materializedPathColumnName: string;
 }
+=======
+ }
+>>>>>>> remotes/origin/next
